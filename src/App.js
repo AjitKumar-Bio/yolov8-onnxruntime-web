@@ -15,11 +15,11 @@ const App = () => {
   const canvasRef = useRef(null);
 
   // Configs
-  const modelName = "yolov8n.onnx";
+  const modelName = "best.onnx";
   const modelInputShape = [1, 3, 640, 640];
   const topk = 100;
-  const iouThreshold = 0.45;
-  const scoreThreshold = 0.25;
+  const iouThreshold = 0.55;
+  const scoreThreshold = 0.15;
 
   // wait until opencv.js initialized
   cv["onRuntimeInitialized"] = async () => {
